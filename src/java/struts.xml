@@ -1,0 +1,22 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="init" namespace="/" extends="struts-default">
+        <action name="init" class="utils.InitValueStack">
+            <result name="success">/Home.jsp</result>
+        </action>
+    </package>
+    <constant name="struts.enable.DynamicMethodInvocation"
+              value="false" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.custom.i18n.resources"
+              value="ApplicationResources" />
+    <include file="search.xml"/>
+    <include file="authentication.xml"/>
+    <include file="book.xml"/>    
+    <include file="review.xml"/>  
+    <include file="comment.xml"/> 
+    <include file="author.xml"/> 
+</struts>
